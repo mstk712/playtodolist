@@ -5,7 +5,6 @@
 @main("Todo list") {
 
     <h1>@tasks.size() task(s)</h1>
-
     <ul>
         @for(task <- tasks) {
             <li>
@@ -16,9 +15,7 @@
             </li>
         }
     </ul>
-
     <h2>Add a new task</h2>
-
     @form(routes.Application.newTask()) {
         @inputText(taskForm("label"))
         <input type="submit" value="Create">
